@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카카오 이모티콘샵</title>
+    <link rel="shortcut icon" href="https://t1.kakaocdn.net/estoreweb/favicon/e_16x16.ico">
+    <script src="https://kit.fontawesome.com/8f9ea64997.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        header{
+            width: 100%;
+            height: 11.3%;
+            display: inline-block;
+            position: fixed;
+            background-color: white;
+            z-index: 3;
+        }
+        .bar{
+            font-size:20px;
+            margin-left: 15px;
+            margin-top: 10px;
+            width: 20%;
+            display:inline-block;
+        }
+        .kakao{
+            text-align: center;
+            font-size: 20px;
+            margin-left: -15px;
+            width: 60%;
+            display:inline-block;
+        }
+        .eye{
+            font-size: 20px;
+            text-align: end;
+            width: 15.5%;
+            display:inline-block;
+        }
+        .face{
+            width: 3%;
+            text-align: center;
+            font-size: 27px;
+            color: rgb(143, 203, 221);
+            
+            display:inline-block;
+        }
+        .cc{
+            text-align: center;
+            background-color: rgb(251, 247, 179);
+
+        }
+        section{
+            width: 100%;
+        }
+        .H_link
+        {
+            position: relative;
+            list-style-type: none;
+            margin-left:31%;
+            margin-top: 2%;
+            font-size: 15px;
+            
+        }   
+        .hm
+        {
+            font-weight:lighter;
+            height: 30px;
+            float: left;
+            width: 13%;
+            text-align: center;
+            color: gray;
+        }
+        .hm:hover{
+            display: flex;
+            justify-content: center;
+            width: 13%; 
+            border:2px solid black;
+            border-top-width: 0px;
+            border-right-width: 0px;
+            border-left-width: 0px;
+            float: left;
+            text-align: center;
+            margin: 0;
+            cursor: pointer;
+            font-weight: bolder;
+            -webkit-text-fill-color: black;
+        }
+        .H_li
+        { 
+            display: flex;
+            justify-content: center;
+            width: 13%; 
+            border:2px solid;
+            border-top-width: 0px;
+            border-right-width: 0px;
+            border-left-width: 0px;
+            float: left;
+            text-align: center;
+            margin: 0;
+            -webkit-text-fill-color: black;
+        }
+        
+        .tt{
+            position: relative;
+            margin-left: 25%;
+        }
+        .em1{
+            position: relative;
+            display: inline-block;
+            width: 176px;
+            height: 202px;
+            background-color: #fff;
+            margin: 6px;
+            box-shadow: 0 2px 10px 0 rgba(0,0,0,.06);
+            text-align: center;
+            cursor: pointer;
+        }
+        .em2{
+            
+            position: relative;
+            display: block;
+            padding: 30px 0 0;
+            
+            text-align: center;
+        }
+        .titem1{
+            position: relative;
+            display: inline-block;
+            max-width: 100%;
+            padding: 16px 14px 0;
+            font-family: "notokr-bold",sans-serif;
+            box-sizing: border-box;
+            
+            height: 19px;
+            text-align: center;
+        }
+        .titem2{
+            position: relative;
+            font-weight: bolder;
+            text-align: center;
+            font-weight: normal;
+            height: 19px;
+        }
+        .em1:hover{
+            .titem2{
+                font-weight: bolder;
+                text-decoration: underline;
+            }
+            
+        }
+        footer{
+            position: relative;
+            bottom: 30px;
+            width: 100%;
+            height: 15%;
+        }
+        #f1{
+            font-size: 13px;
+            margin: 0;
+        }
+        #f2{
+            color: gray;
+            font-size: 11px;
+            padding: 10px 0px 0px;
+            margin: 0;
+        }
+        #f3{
+            color: gray;
+            font-size: 11px;
+            padding: 6px 0px 0px;
+            margin: 0;
+        }
+        #f4{
+            color: gray;
+            font-size: 11px;
+            margin: 0;
+        }
+        #fo{
+            font-weight: normal;
+        }
+        #fo:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .st{
+        width: 100%;
+        height: 700px;
+        background-color: #f5f5f5;
+    }
+    .stt{
+        padding-top: 50px;
+        margin-left: 25%;
+    }
+    .me{
+        margin-left: 25%;
+    }
+    #mes> img{
+        margin-right: 40px;
+    }
+    #mess{
+        margin-right: 50px;
+    }
+    .cu{
+        margin-left: 25%;
+    }
+    #cut> img{
+        margin-right: 40px;
+    }
+    #cute{
+        margin-right: 50px;
+    }
+    .fu{
+        margin-left: 25%;
+    }
+    #fun> img{
+        margin-right: 40px;
+    }
+    #funn{
+        margin-right: 50px;
+    }
+    #z{
+        padding-bottom: 30px;
+    }
+    #z{
+        font-size: large; color: rgb(178, 151, 253);
+        vertical-align: top;
+    }
+    #zz{
+        font-size: large; color: #ffc0cb;
+        vertical-align: top;
+    }
+    #zzz{
+        font-size: large; color: mediumaquamarine;
+        vertical-align: top;
+    }
+    .hot{
+            padding: 0px 40px 0px 0px;
+            float: left;
+        }
+        .ht_1{
+            
+            display: table;
+            table-layout: fixed;
+            position: relative; 
+            color: red;
+            padding: 0px 10px 0px 0px;
+            font-size: 24px;
+            
+
+        }
+        .ht_1:after{
+            position: absolute;
+            bottom: 0;
+            left: 42px;
+            right: 0;
+            content: "";
+            height: 1px;
+            background-color: rgba(0,0,0,.04);
+        }
+        .hl_1{
+            width: 52px;
+            height: 100px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .h_1{
+            width: 294px;
+            height: 100px;
+            display: table-cell;
+            vertical-align: middle;
+            
+        }
+        
+        .h_name1{
+            display: block;
+            font-size: 16px;
+            color: black;
+            font-weight: normal;
+            line-height: 18px;
+            cursor: pointer;
+        }
+        .ht_1:hover{
+            .h_name1{
+                font-weight: bolder;
+                text-decoration: underline;
+            }
+            
+        }
+        
+        .ham_hover{
+            position: absolute;
+        top: 0px;
+        left: 0px;
+            display: none;
+        }
+        .em2:hover{
+            
+            .ham_hover{
+            display:block;
+            }
+
+        }
+        .h_name2{
+            display: block;
+            font-size: 13px;
+            line-height: 19px;
+            color: gray;
+            cursor: pointer;
+        }
+        .li_img{
+
+            display: table-cell;
+            vertical-align: middle;
+            padding: 0px 0px 0px 20px;
+            width: 76px;
+            height: 100px;
+            cursor: pointer;
+            
+        }
+    </style>
+            
+</head>
+<body>
+    <header>
+        
+            <div class="bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            
+            <div class="kakao">
+                kakao<b>emoticon</b> shop
+            </div>
+            <div class="eye">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="face">
+                <i class="fa-solid fa-circle-user"></i>
+            </div>
+            <ul class="H_link">
+                <li class="H_li">
+                    <div class="hm">
+                        <b>홈</b>
+                    </div>
+                </li>
+                <li class>
+                    <div class="hm">
+                        신규
+                    </div>
+                    <div class="hm">
+                        인기
+                    </div>
+                    <div class="hm">
+                        스타일
+                    </div>
+                </li>
+            </ul>
+    </header>
+    <br><br><br><br><br>
+    <section>
+        <article>
+            <div class="cc">
+        
+                <img src="https://item.kakaocdn.net/dn/E5GZJ/btsshkRrgQL/lDvfGFcB9LVG1QiljCmI00/img.gif"  width="944" height="531" style="cursor: pointer;">
+                
+            </div>
+        </article>
+        <article>
+            <div class="tt">
+                <br><b style="font-size: x-large; cursor: pointer;">신규 이모티콘 </b> <span style="font-size: xx-large; font-weight: lighter; color: grey; cursor: pointer;">></span><br><br>
+                <div class="em1">
+                    <span class="em2">
+                        <img src="https://item.kakaocdn.net/do/0200f21fc7a91434bdb47679a024cf71617ea012db208c18f6e83b1a90a7baa7" alt="햄뿡이" class="ham_default" width="112" height="112">
+                        <img src="https://item.kakaocdn.net/do/0200f21fc7a91434bdb47679a024cf71f43ad912ad8dd55b04db6a64cddaf76d" class="ham_hover" width="112" height="112">
+                    </span>
+                    <strong class="titem1">
+                        <span class="titem2" style="font-size: 14px ; text-align: center;">햄뿡이는 아직도 회사...</span>
+                    </strong>
+                    
+                </div>
+                <div class="em1">
+                    <span class="em2">
+                        <img src="https://item.kakaocdn.net/do/40413f43b7fd0b6985ecef346d770ee9617ea012db208c18f6e83b1a90a7baa7" alt="업티콘" class="up_default" width="112" height="112">
+                    </span>
+                    <strong class="titem1">
+                        <span class="titem2" style="font-size: 14px; text-align: center;">업티콘 대충 후딱후...</span>
+                    </strong>
+                </div>
+                <div class="em1">
+                    <span class="em2">
+                        <img src="https://item.kakaocdn.net/do/55db2a50bd75fce744eade5e02a578ac617ea012db208c18f6e83b1a90a7baa7" alt="하찮짱" class="jjang_default" width="112" height="112">
+                    </span>
+                    <strong class="titem1">
+                        <span class="titem2" style="font-size: 14px; text-align: center;">하찮찌만 짱이지 2</span>
+                    </strong>
+                </div>
+                <div class="em1">
+                    <span class="em2">
+                        <img src="https://item.kakaocdn.net/do/acb2d4e73846fe27704adf969316cc95617ea012db208c18f6e83b1a90a7baa7" alt="놓정" class="rope_default" width="112" height="112">
+                    </span>
+                    <strong class="titem1"> 
+                        <span class="titem2" style="font-size: 14px; text-align: center;">놓지마 정신줄</span>
+                    </strong>
+                </div>
+                <div class="em1">
+                    <span class="em2">
+                        <img src="https://item.kakaocdn.net/do/07f3c913456015505c89325fc34666de617ea012db208c18f6e83b1a90a7baa7" alt="곰됴리" class="bear_default" width="112" height="112">
+                    </span>
+                    <strong class="titem1">
+                        <span class="titem2" style="font-size: 14px ;text-align: center;">귀염뽀짝 곰됴리 5</span>
+                    </strong>
+                </div><br><br>
+                <div class="em1">
+                    <span class="em2">
+                        <img src="https://item.kakaocdn.net/do/d5feb04ea0427902a6bf295d83f96474617ea012db208c18f6e83b1a90a7baa7" alt="떡토끼" class="rabbit_default" width="112" height="112">
+                    </span>
+                    <strong class="titem1">
+                        <span class="titem2" style="font-size: 14px ;text-align: center;">말랑쫀득 떡토끼 무...</span>
+                    </strong>
+                </div>
+                <div class="em1">
+                    <span class="em2">
+                        <img src="https://item.kakaocdn.net/do/76c31f4ac2ba412b20ad126cec6d9a72617ea012db208c18f6e83b1a90a7baa7" alt="트월킹" class="duck_default" width="112" height="112">
+                    </span>
+                    <strong class="titem1">
+                        <span class="titem2" style="font-size: 14px ;text-align: center;">트월킹 외길 10년 5탄</span>
+                    </strong>
+                </div>
+                <div class="em1">
+                    <span class="em2">
+                        <img src="https://item.kakaocdn.net/do/3221c906b4d6dfcb72dafb86e022f09e617ea012db208c18f6e83b1a90a7baa7" alt="판다소녀" class="panda_default" width="112" height="112">
+                    </span>
+                    <strong class="titem1">
+                        <span class="titem2" style="font-size: 14px ;text-align: center;">느긋한 판다소녀 푸...</span>
+                    </strong>
+                </div>
+                <div class="em1">
+                    <span class="em2">
+                        <img src="https://item.kakaocdn.net/do/8438d499aa70288879ef79554c16bcfe617ea012db208c18f6e83b1a90a7baa7" alt="민이" class="min_default" width="112" height="112">
+                    </span>
+                    <strong class="titem1">
+                        <span class="titem2" style="font-size: 14px ;text-align: center;">민이와 함께 다정한 ...</span>
+                    </strong>
+                </div>
+                <div class="em1">
+                    <span class="em2">
+                        <img src="https://item.kakaocdn.net/do/a1aabcc13d23a6d94c8a37983603ba1d617ea012db208c18f6e83b1a90a7baa7" alt="마음따뜻" class="warm_default" width="112" height="112">
+                    </span>
+                    <strong class="titem1">
+                        <span class="titem2" style="font-size: 14px ;text-align: center;">마음따뜻톡 3</span>
+                    </strong>
+                </div>
+            </div>
+            
+        </article>
+        <br><br><br>
+        <article>
+            <div class="tt">
+                <br><b style="font-size: x-large; cursor: pointer;">인기 이모티콘 </b> <span style="font-size: xx-large; font-weight: lighter; color: grey; cursor: pointer;">></span><br><br>
+                <ol class="hot">
+                    <li class="ht_1"><span class="hl_1">1</span>
+                        <div class="h_1">
+                            <span class="h_name1" >기분 좋은 모코코의 하루</span>
+                            <span class="h_name2">로스트아크</span>
+                        </div>
+                        
+                        <div class="li_img"><img src="https://item.kakaocdn.net/do/54ff74fb7f34ae6ba3c48318742d3c47617ea012db208c18f6e83b1a90a7baa7" width="76px" height="76px" class="mo"></div>
+                    </li>
+                    <li class="ht_1"><span class="hl_1">2</span>
+                        <div class="h_1">
+                            <span class="h_name1">이파리콘</span>
+                            <span class="h_name2">이세계아이돌</span>
+                        </div>
+                        
+                        <div class="li_img"><img src="https://item.kakaocdn.net/do/1bff11e5006d29106016149a4f383af0617ea012db208c18f6e83b1a90a7baa7" width="76px" height="76px" ></div>
+                    </li>
+                    <li class="ht_1"><span class="hl_1">3</span>
+                        <div class="h_1">
+                            <span class="h_name1">빵빵아! 옥지얌!</span>
+                            <span class="h_name2">빵빵이</span>
+                        </div>
+                        
+                        <div class="li_img"><img src="https://item.kakaocdn.net/do/f815c741c074c7f3bf30655773e16502617ea012db208c18f6e83b1a90a7baa7" width="76px" height="76px" ></div>
+                    </li>
+                    <li class="ht_1"><span class="hl_1"style="color: black;">4</span>
+                        <div class="h_1">
+                            <span class="h_name1">오늘의 짤 #너에게 짤생배팅</span>
+                            <span class="h_name2">MOH lnc.</span>
+                        </div>
+                        
+                        <div class="li_img"><img src="https://item.kakaocdn.net/do/edf16693f52785bc25470da5818d91ea617ea012db208c18f6e83b1a90a7baa7" width="76px" height="76px" ></div>
+                    </li>
+                    <li class="ht_1"><span class="hl_1"style="color: black;">5</span>
+                        <div class="h_1">
+                            <span class="h_name1">햄뿡이는 아직도 회사 다니는 중.. 뿡...</span>
+                            <span class="h_name2">신난다</span>
+                        </div>
+                        
+                        <div class="li_img"><img src="https://item.kakaocdn.net/do/0200f21fc7a91434bdb47679a024cf71617ea012db208c18f6e83b1a90a7baa7" width="76px" height="76px" ></div>
+                    </li>
+                    
+                </ol>
+                <ol class="hot">
+                    <li class="ht_1"><span class="hl_1"style="color: black;">6</span>
+                        <div class="h_1">
+                            <span class="h_name1">유리멘탈 오니기리</span>
+                            <span class="h_name2">오니기리</span>
+                        </div>
+                        
+                        <div class="li_img"><img src="https://item.kakaocdn.net/do/b7a019fee40e42ccd88f10c8d648b08f617ea012db208c18f6e83b1a90a7baa7" width="76px" height="76px" ></div>
+                    </li>
+                    <li class="ht_1"><span class="hl_1"style="color: black;">7</span>
+                        <div class="h_1">
+                            <span class="h_name1">나애미와 애정 터지는 톡</span>
+                            <span class="h_name2">나애미</span>
+                        </div>
+                        
+                        <div class="li_img"><img src="https://item.kakaocdn.net/do/e8f3c2a7940db54473eab55e29244cbd617ea012db208c18f6e83b1a90a7baa7" width="76px" height="76px" ></div>
+                    </li>
+                    <li class="ht_1"><span class="hl_1"style="color: black;">8</span>
+                        <div class="h_1">
+                            <span class="h_name1">뽀야와 느므 좋아 톡</span>
+                            <span class="h_name2">뽀야</span>
+                        </div>
+                        
+                        <div class="li_img"><img src="https://item.kakaocdn.net/do/0a50095d7cd6c11c1007c283d7cf23ab617ea012db208c18f6e83b1a90a7baa7" width="76px" height="76px" ></div>
+                    </li>
+                    <li class="ht_1"><span class="hl_1"style="color: black;">9</span>
+                        <div class="h_1">
+                            <span class="h_name1">망그러진 곰과 햄터</span>
+                            <span class="h_name2">유랑</span>
+                        </div>
+                        
+                        <div class="li_img"><img src="https://item.kakaocdn.net/do/97c663340226c2f87d193ae50db5eb70617ea012db208c18f6e83b1a90a7baa7" width="76px" height="76px" ></div>
+                    </li>
+                    <li class="ht_1"><span class="hl_1" style="color: black;">10</span>
+                        <div class="h_1">
+                            <span class="h_name1">잔망 루피 7</span>
+                            <span class="h_name2">잔망 루피</span>
+                        </div>
+                        
+                        <div class="li_img"><img src="https://item.kakaocdn.net/do/a6903780538d9dfc6ca0bfdd94df96e9617ea012db208c18f6e83b1a90a7baa7" width="76px" height="76px" ></div>
+                    </li>
+                    
+                </ol>
+            </div>
+        </article>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <article>
+            <div class="st">
+                <div class="stt">
+                    <br><b style="font-size: x-large; cursor: pointer;">스타일 </h2> <span style="font-size: xx-large; font-weight: lighter; color: grey; cursor: pointer;">></span><br>
+                </div>
+                <div class="me">
+                    <span id="mess">
+                        <br>
+                        <span id="z" style="cursor: pointer;">#메시지</span>
+                    </span>
+                    <span id="mes">
+                    <img src="https://item.kakaocdn.net/do/3053e0c6b230df6049a85f2556bffbae617ea012db208c18f6e83b1a90a7baa7" width="125" height="125" style="cursor: pointer;">
+                    <img src="https://item.kakaocdn.net/do/d95f3a6fc6db9d0c1674337aa6b6ef14617ea012db208c18f6e83b1a90a7baa7" width="125" height="125" style="cursor: pointer;">
+                    <img src="https://item.kakaocdn.net/do/92df2c0566aba5bd7814b44939c9c786617ea012db208c18f6e83b1a90a7baa7" width="125" height="125" style="cursor: pointer;">
+                    <img src="https://item.kakaocdn.net/do/001c1c34f011fbbe0090d267d53b8faf617ea012db208c18f6e83b1a90a7baa7" width="125" height="125" style="cursor: pointer;">
+                    <img src="https://item.kakaocdn.net/do/6a3e242bb7a5c767f7908ebb4e39177a617ea012db208c18f6e83b1a90a7baa7" width="125" height="125" style="cursor: pointer;">
+                </span>
+                </div>
+                <div class="cu">
+                    <span id="cute"><br><span id="zz" style="cursor: pointer;">#귀여운</span></span>
+                    <span id="cut">
+                    <img src="https://item.kakaocdn.net/do/3221c906b4d6dfcb72dafb86e022f09e617ea012db208c18f6e83b1a90a7baa7" width="125" height="125" style="cursor: pointer;">
+                    <img src="https://item.kakaocdn.net/do/2510a019d6ed05c48cb0a33600a32498617ea012db208c18f6e83b1a90a7baa7" width="125" height="125" style="cursor: pointer;">
+                    <img src="https://item.kakaocdn.net/do/281b8e9de3a0c8795e6d41df559fe913617ea012db208c18f6e83b1a90a7baa7" width="125" height="125" style="cursor: pointer;">
+                    <img src="https://item.kakaocdn.net/do/cf97906eff1dc6777d9a539fa3729df2617ea012db208c18f6e83b1a90a7baa7" width="125" height="125" style="cursor: pointer;"> 
+                    <img src="https://item.kakaocdn.net/do/302e6b81527151f24c52ad7c964e46a0617ea012db208c18f6e83b1a90a7baa7" width="125" height="125" style="cursor: pointer;">
+                </span>
+                </div>
+                <div class="fu">
+                    <span id="funn"><br><span id="zzz" style="cursor: pointer;">#재밌는</span></span>
+                    <span id="fun">
+                    <img src="https://item.kakaocdn.net/do/8bdc5b0204010246d459301496fe2f14617ea012db208c18f6e83b1a90a7baa7" width="125" height="125" style="cursor: pointer;">
+                    <img src="https://item.kakaocdn.net/do/d6aaacb129d020c77307e21bee15f29e617ea012db208c18f6e83b1a90a7baa7" width="125" height="125" style="cursor: pointer;">
+                    <img src="https://item.kakaocdn.net/do/f4655fa386cec87e0405a747669d5c9e617ea012db208c18f6e83b1a90a7baa7" width="125" height="125" style="cursor: pointer;">
+                    <img src="https://item.kakaocdn.net/do/858ce5df0c2089a998552e1d8a3f3abb617ea012db208c18f6e83b1a90a7baa7" width="125" height="125" style="cursor: pointer;">
+                    <img src="https://item.kakaocdn.net/do/3c35f670ffdd1694052bf8d42a9a1835617ea012db208c18f6e83b1a90a7baa7" width="125" height="125" style="cursor: pointer;">
+                </span>
+                </div>
+            </div>
+        </article>
+        
+    </section>
+    
+    <footer>
+        <div class="tt">
+            <div id="foot">
+                <p id="f1" style="margin-top: 50px;"><span id = fo>이용약관</span> | <span id = fo>유료이용안내</span> | <span style="font-weight: bold;" id = fo>개인정보처리방침</span> | <span id = fo>기업고객</span> | <span id = fo>문의하기</span> | <span id = fo>공정위사업자정보</span> | <span style="font-weight: bold;" id="fo">(주) 카카오</span></p>
+                <p id="f2">카카오 이모티콘샵에서 판매되는 콘텐츠의 저작권은 콘텐츠 제공자에게 있으며, 이를 무단 이용하는 경우 저작권법 등에 따라 처벌될 수 있습니다.</p>
+                <p id="f3">대표: 홍은택 | 사업자등록번호: 120-81-47521 | 통신판매업신고번호: 제2015-제주아라-0032호</p>
+                <p id="f4" style="margin-bottom: 50px;">주소: 제주특별자치도 제주시 첨단로 242(영평동) | 호스팅사업자: (주)카카오 | 고객센터: 1577-3754 | 이메일: help.notice@kakaocorp.com</p>
+            </div>
+        </div>
+        
+    </footer>
+    </body>
+</html>
